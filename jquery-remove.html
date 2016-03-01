@@ -6,14 +6,16 @@
     <script>
       $(document).ready(function(){
 
-        $("h1").click(function(){
+        $(".on").click(function(){
 
-          $("section").removeClass("secret");
+          $(".day").removeClass("secret");
+          $(".evening").addClass("night");
 
         });
 
-        $("h2").click(function(){
-          $("section").addClass("secret");
+        $(".off").click(function(){
+          $(".day").addClass("secret");
+          $(".evening").removeClass("night");
 
         })
 
@@ -21,27 +23,38 @@
     </script>
     <style>
 
-      .fancy {
-        border: 1px solid orange ;
-      }
+    .visible {
+      display:block;
+    }
 
-      .secret {
-        display:none;
-      }
+    .secret {
+      display:none;
+    }
+
+    .night {
+      display:none;
+    }
+
+    img {
+      height: 50%;
+      width: 50%;
+    }
 
 
     </style>
   </head>
   <body>
 
-    <h1>Show the content</h1>
-    <h2>hide the content</h2>
-    <section class="secret">
+    <h1>SUN</h1>
+    <h2 class="on">ON</h2>
+    <h2 class="off">OFF</h2>
+    <div class="day">
+      <img src="landscapeday.jpg">
+    </div>
+    <div class="night evening">
+      <img src="landscapenight.jpg">
+    </div>
 
-      <h2>This is the second-most important thing</h2>
-      <p>A long time ago</p>
-      <p>In a galaxy far, far away...</p>
-    </section>
 
   </body>
 </html>
