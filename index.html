@@ -10,21 +10,54 @@
 
           $(".day").removeClass("secret");
           $(".evening").addClass("night");
-
+          $(".stars").addClass("universe");
         });
 
         $(".off").click(function(){
           $(".day").addClass("secret");
           $(".evening").removeClass("night");
+          $(".stars").addClass("universe");
+        });
 
-        })
+        $(".question").click(function(){
+          $(".day").addClass("secret");
+          $(".stars").removeClass("universe");
+          $(".evening").addClass("night");
+        });
 
       });
     </script>
     <style>
 
+    h1 {
+      font-family: sans-serif;
+      padding: 10px;
+      border: 1px solid black;
+      width: 80px;
+    }
+
+
     .visible {
       display:block;
+    }
+
+    .on {
+      display:block;
+      float: left;
+      margin: 5px;
+    }
+
+    .off {
+      display:block;
+      float: left;
+      margin: 5px;
+    }
+
+    .question {
+      display:block;
+      position: absolute;
+      bottom: 500px;
+      right: 500px;
     }
 
     .secret {
@@ -32,6 +65,10 @@
     }
 
     .night {
+      display:none;
+    }
+
+    .universe {
       display:none;
     }
 
@@ -48,13 +85,16 @@
     <h1>SUN</h1>
     <h2 class="on">ON</h2>
     <h2 class="off">OFF</h2>
+    <h2 class="question"> ? </h2>
     <div class="day">
       <img src="landscapeday.jpg">
     </div>
     <div class="night evening">
       <img src="landscapenight.jpg">
     </div>
-
+    <div class="universe stars">
+      <img src="universe.jpg">
+    </div>
 
   </body>
 </html>
